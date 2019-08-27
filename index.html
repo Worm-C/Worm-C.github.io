@@ -146,6 +146,106 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python之列表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/27/python之列表/">python之列表</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/27/python之列表/" class="archive-article-date">
+  	<time datetime="2019-08-27T13:56:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="5-1-1-创建列表"><a href="#5-1-1-创建列表" class="headerlink" title="5.1.1 创建列表"></a>5.1.1 创建列表</h1><p>​    只需要用一个[  ]括号把数据包裹起来(数据之间用（，）逗号合开)</p>
+<p>​    &gt;&gt;&gt;[1,2,3,4,5,6]</p>
+<p>​         [1, 2, 3, 4, 5, 6]</p>
+<p>给列表添加名字,方便我们下次继续使用</p>
+<p>​    &gt;&gt;&gt;number=[1,2,3,4,5,6]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;	type(number)    <span class="comment">###  type()函数用于返回指定参数的类型，list既列表的意思，</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt;		&lt;<span class="class"><span class="keyword">class</span>  '<span class="title">list</span>'&gt;</span></span><br><span class="line"><span class="class">&gt;&gt;&gt;</span></span><br><span class="line"><span class="class">&gt;&gt;&gt; <span class="title">for</span> <span class="title">each</span> <span class="title">in</span> <span class="title">number</span>:</span>    <span class="comment">### 遍历number数组 </span></span><br><span class="line">print(each)</span><br><span class="line">	<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Python的列表支持不同数据类型，并能将各种数据类型放在一起</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mix =[<span class="number">1</span>,<span class="string">"ccliu"</span>,<span class="number">3.14</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="string">'刘'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(mix)</span><br><span class="line">[<span class="number">1</span>, <span class="string">'ccliu'</span>, <span class="number">3.14</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">'刘'</span>]</span><br></pre></td></tr></table></figure>
+
+<h1 id="5-1-2向列表中添加元素"><a href="#5-1-2向列表中添加元素" class="headerlink" title="5.1.2向列表中添加元素"></a>5.1.2向列表中添加元素</h1><p>列表并不是一成不变的，可以随时往列表中添加元素，可以使用append()方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>number=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number.append(<span class="number">7</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>]</span><br></pre></td></tr></table></figure>
+
+<p><strong>注：append()方法只支持一个参数，不然会报错！</strong></p>
+<p>​    如果希望同时添加多个数据，可以使用extend()方法向列表末尾添加多个元素,括号里面用[ ]</p>
+<p>​    把数据内容包起来：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">number</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number.extend([<span class="number">8</span>,<span class="number">9</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>注：extend()事实上是使用一个列表来扩充另一个列表，所以它的参数是另一个列表</strong></p>
+<p>​    如果想往列表中任意位置插入元素，可以使用insert（）方法:</p>
+<p>​    insert()方法有两个参数，第一个参数是指定待插入的位置（索引值），第二个参数是待插入的素值。</p>
+<p>下面代码将数值0插入到number列表的最前面：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>number</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line">number.insert(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br></pre></td></tr></table></figure>
+
+<p>​    注：索引值是从0开始的</p>
+<p>下面代码将数字6插入5和7之间：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>number =[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number.insert(<span class="number">6</span>,<span class="number">6</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br></pre></td></tr></table></figure>
+
+<p>insert()方法中代表位置的第一个参数还支持负数，表示与列表末尾的相对距离：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>number.insert(<span class="number">-1</span>,<span class="number">8.5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">8.5</span>, <span class="number">9</span>]</span><br></pre></td></tr></table></figure>
+
+<h1 id="5-13-从列表中获取元素"><a href="#5-13-从列表中获取元素" class="headerlink" title="5.13 从列表中获取元素"></a>5.13 从列表中获取元素</h1><p>通过索引值可以直接获取列表中的某个元素（格式：变量名[索引值]）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>fruit= [<span class="string">"西瓜"</span>,<span class="string">"葡萄"</span>,<span class="string">"苹果"</span>,<span class="string">"哈密瓜"</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>fruit[<span class="number">2</span>]</span><br><span class="line"><span class="string">'苹果'</span></span><br></pre></td></tr></table></figure>
+
+<p>如果你想要访问列表中最后的一个元素，可以使用l en ()函数获取该列表的长度：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fruit= [<span class="string">"西瓜"</span>,<span class="string">"葡萄"</span>,<span class="string">"苹果"</span>,<span class="string">"哈密瓜"</span>]</span><br><span class="line">fruit[len(fruit)<span class="number">-1</span>]</span><br><span class="line"><span class="string">'哈密瓜'</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注：再减1就是这个列表最后一个元素的索引值</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/27/python之列表/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-数据库基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
